@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have started as a visiting researcher at the Lee Lab, University of Wisconsin-Madison
+I have started as a visiting researcher at the [Lee Lab](https://kangwooklee.com/), University of Wisconsin-Madison
