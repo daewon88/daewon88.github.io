@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper got accepted to [AAAI 2025](https://aaai.org/conference/aaai/aaai-25/)
+📝 New preprint realeased: Check out [ENTP](https://x.com/Kangwook_Lee/status/1842020800620040549)

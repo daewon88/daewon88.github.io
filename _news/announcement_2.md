@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint realeased: Check out [ENTP](https://x.com/Kangwook_Lee/status/1842020800620040549)
+📝 Our paper got accepted to [ICMLW 2024](https://icml-fm-wild.github.io/)
