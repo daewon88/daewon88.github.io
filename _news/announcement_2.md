@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint realeased: checkout [ENTP](https://x.com/Kangwook_Lee/status/1842020800620040549)
+New preprint realeased: Check out [ENTP](https://x.com/Kangwook_Lee/status/1842020800620040549)
