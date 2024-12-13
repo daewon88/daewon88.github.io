@@ -19,6 +19,4 @@ Hello! I am a Master student in Computer Science at Korea University, advised by
 
 My long-term research goal is to develop capable and robust AI agents. To achieve this, my current research focuses on advancing generative foundation models, such as large language models (LLMs) and text-to-image diffusion models. Specifically, I have focused on exploring the property of generative modeling (e.g., next-token prediction) and developing effective post-training methods (e.g., RL fine-tuning).
 
-📨 If you are interested in me, feel free to contact me.
-
-📝 You can find my CV [here](/assets/pdf/example_pdf.pdf)
+📝 You can find my CV [here](/assets/pdf/cv.pdf)
