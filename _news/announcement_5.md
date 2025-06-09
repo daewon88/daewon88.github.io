@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📝 Our paper got accepted to [ICML 2025](https://arxiv.org/abs/2502.06737) (Spotlight)
+📝 Our paper got accepted to [ICML 2025](https://arxiv.org/abs/2502.06737) (Oral)
