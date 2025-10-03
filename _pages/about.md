@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I am a first-year Ph.D. student in Electrical and Computer Engineering at the University of Michigan, advised by [Prof. Hun-Seok Kim](https://kim.engin.umich.edu/). My recent research focuses on improving the efficiency of generative foundation models.
+Hello! I am a first-year Ph.D. student in Electrical and Computer Engineering at the University of Michigan, advised by [Prof. Hun-Seok Kim](https://kim.engin.umich.edu/). My recent research interest lies in improving the efficiency of generative foundation models.
 
 Previously, I received my M.S. in Computer Science from Korea University under [Prof. Jinkyu Kim](https://visionai.korea.ac.kr/), collaborating with [Prof. Kimin Lee](https://sites.google.com/view/kiminlee) at KAIST. I also spent time as a visiting student at the University of Wisconsin-Madison, working with [Prof. Kangwook Lee](https://kangwooklee.com/aboutme/).
 
