@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <i class="fa-solid fa-envelope"></i> cdw098[at]korea[dot]ac[dot]kr
+subtitle: <i class="fa-solid fa-envelope"></i> daewon@umich.edu
 
 profile:
   align: right
