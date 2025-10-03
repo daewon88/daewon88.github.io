@@ -15,8 +15,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I am a Master student in Computer Science at Korea University, advised by [Prof. Jinkyu Kim](https://visionai.korea.ac.kr/). I am currently collaborating closely with [Prof. Kimin Lee](https://sites.google.com/view/kiminlee) at KAIST. Previously, I was a visiting student at the Lee Lab at University of Wisconsin-Madison, under the supervision of [Prof. Kangwook Lee](https://kangwooklee.com/aboutme/).
+Hello! I am a Ph.D. student in Electrical and Computer Engineering at the University of Michigan, advised by Prof. Hun-Seok Kim. My recent research focuses on improving the efficiency of generative foundation models.
 
-My long-term research goal is to develop capable and robust AI agents. To achieve this, my current research focuses on advancing generative foundation models, such as large language models (LLMs) and text-to-image diffusion models. Specifically, I have focused on exploring the property of generative modeling (e.g., next-token prediction) and developing effective post-training methods (e.g., RL fine-tuning).
+Previously, I received my M.S. in Computer Science from Korea University under Prof. Jinkyu Kim, collaborating with Prof. Kimin Lee at KAIST. I also spent time as a visiting student at the University of Wisconsin-Madison with Prof. Kangwook Lee.
 
 📌 You can find my CV [here](/assets/pdf/cv.pdf)

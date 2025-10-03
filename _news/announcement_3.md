@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-10-02 07:59:00-0400
+date: 2025-07-26 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-📝 New preprint realeased: Check out [ENTP](https://x.com/Kangwook_Lee/status/1842020800620040549)
+📝 Our paper got accepted to [BMVC 2025](https://arxiv.org/abs/2509.21938)
