@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📝 Our paper got accepted to [NeurIPS 2025 workshop](https://arxiv.org/abs/2410.01600)
+📝 Our paper got accepted to [TMLR](https://arxiv.org/abs/2410.01600)
