@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📝 Our paper got accepted to [TMLR 2025](https://arxiv.org/abs/2410.01600)
+📝 Our paper got accepted to [TMLR 2025](https://arxiv.org/abs/2410.01600) (J2C Certification)
