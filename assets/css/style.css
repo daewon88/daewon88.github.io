@@ -18,6 +18,10 @@
   --tag-ink: #1b6049;
   --select: #d6efe1;
 
+  /* photo width drives the contact icon row below it, so one number rescales
+     the whole left column */
+  --photo: 205px;
+
   /* San Francisco on Apple platforms; Inter is the closest stand-in elsewhere.
      SF Pro Display is optically tuned for large sizes, SF Pro Text for body. */
   --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro",
@@ -54,7 +58,7 @@ body {
 }
 
 .page {
-  max-width: 760px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 72px 28px 96px;
 }
@@ -97,7 +101,8 @@ a:focus-visible {
 }
 
 .intro-photo {
-  flex: 0 0 180px;
+  order: -1;
+  flex: 0 0 var(--photo);
   margin-top: 10px;
 }
 
@@ -131,30 +136,42 @@ h1 {
 }
 
 .bio:last-of-type {
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
-/* --- contact row ---------------------------------------------------------- */
+/* --- contact icons (under the photo) -------------------------------------- */
 
 .contact {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 10px;
-  font-family: var(--display);
-  font-size: 14.5px;
-  font-weight: 450;
-  letter-spacing: -0.01em;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--photo) * 0.073);
+  margin-top: calc(var(--photo) * 0.068);
 }
 
 .contact a {
-  border-bottom-width: 1px;
-  white-space: nowrap;
+  display: inline-flex;
+  /* no hairline underline on an icon */
+  border-bottom: 0;
+  /* padding pulled back by margin: a finger-sized hit area, same visual size */
+  padding: 5px;
+  margin: -5px;
+  color: var(--muted);
+  transition: color 0.15s ease;
 }
 
-.contact .sep {
-  color: var(--rule);
-  user-select: none;
+.contact a:hover,
+.contact a:focus-visible {
+  color: var(--accent);
+}
+
+.contact svg {
+  display: block;
+  /* width follows each icon's own aspect ratio so none is squashed */
+  height: max(14px, calc(var(--photo) * 0.078));
+  width: auto;
+  fill: currentColor;
 }
 
 /* --- sections ------------------------------------------------------------- */
@@ -177,6 +194,78 @@ h2 {
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- publication view tabs ------------------------------------------------ */
+
+.pub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 24px;
+  margin: 0 0 2px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.pub-tab {
+  /* sit the active underline on top of the row's hairline */
+  margin-bottom: -1px;
+  padding: 0 0 9px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  line-height: 1.25;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-tab:hover {
+  color: var(--ink-soft);
+}
+
+.pub-tab[aria-pressed="true"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.pub-tab:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Selected view: only the curated entries, and no year rail — the year
+   chronology is what the full view is for. */
+#pub-list[data-mode="selected"] .pubs > li:not([data-selected]) {
+  display: none;
+}
+
+#pub-list[data-mode="selected"] .year-group {
+  grid-template-columns: 1fr;
+  /* match .pubs li + li so entries read as one evenly spaced list even when
+     they come from different year groups */
+  margin-top: 26px;
+}
+
+#pub-list[data-mode="selected"] .year {
+  display: none;
 }
 
 /* --- news ----------------------------------------------------------------- */
@@ -257,6 +346,9 @@ h2 {
 .authors .me {
   color: var(--ink);
   font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .venue {
@@ -353,6 +445,10 @@ footer {
 /* --- narrow screens ------------------------------------------------------- */
 
 @media (max-width: 640px) {
+  :root {
+    --photo: 165px;
+  }
+
   .page {
     padding: 44px 20px 72px;
   }
@@ -364,8 +460,7 @@ footer {
 
   .intro-photo {
     flex: 0 0 auto;
-    order: -1;
-    width: 136px;
+    width: var(--photo);
     margin-top: 0;
   }
 
@@ -375,6 +470,14 @@ footer {
 
   h2 {
     font-size: 22px;
+  }
+
+  .pub-tabs {
+    gap: 0 18px;
+  }
+
+  .pub-tab {
+    font-size: 18px;
   }
 
   section {

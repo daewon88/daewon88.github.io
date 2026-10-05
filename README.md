@@ -8,14 +8,19 @@ A plain static site: no build step, no dependencies.
 index.html               the whole page
 assets/css/style.css     styles
 assets/img/prof_pic.jpg  profile photo
-assets/pdf/cv.pdf        CV
+assets/pdf/cv_new.pdf    CV
 .nojekyll                tells GitHub Pages to serve files as-is
 ```
 
 ## Editing
 
 Everything lives in `index.html`. Publications are grouped by year under
-`<section>` → `.year-group`; news items are `<li>` entries in `.news`.
+`#pub-list` → `.year-group`; news items are `<li>` entries in `.news`.
+
+The Selected Work / Full Publications tabs filter that one list rather than
+duplicating it: add the bare `data-selected` attribute to a publication's
+`<li>` to have it appear under Selected Work. Year groups with no selected
+entry hide themselves.
 Colors, type scale and spacing are CSS custom properties at the top of
 `assets/css/style.css`.
 
