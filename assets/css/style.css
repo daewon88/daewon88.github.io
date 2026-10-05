@@ -1,0 +1,406 @@
+/* ---------------------------------------------------------------------------
+   Daewon Chae — personal site
+   San Francisco (Inter fallback), white ground, pine-green accent.
+   Light theme only.
+--------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light only;
+
+  --bg: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #484850;
+  --muted: #86868b;
+  --rule: #e5e5e7;
+  --accent: #176b4d;
+  --accent-soft: #1f8c63;
+  --tag-bg: #edf5f0;
+  --tag-ink: #1b6049;
+  --select: #d6efe1;
+
+  /* San Francisco on Apple platforms; Inter is the closest stand-in elsewhere.
+     SF Pro Display is optically tuned for large sizes, SF Pro Text for body. */
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro",
+    "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.003em;
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--select);
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 28px 96px;
+}
+
+/* --- links ---------------------------------------------------------------- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  /* hairline underline; the color-mix line is a progressive upgrade */
+  border-bottom: 1px solid var(--rule);
+  border-bottom-color: color-mix(in srgb, var(--accent) 28%, transparent);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-soft);
+  border-bottom-color: var(--accent-soft);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- intro ---------------------------------------------------------------- */
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.intro-photo {
+  flex: 0 0 180px;
+  margin-top: 10px;
+}
+
+.intro-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  filter: saturate(0.92);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.032em;
+  line-height: 1.1;
+}
+
+.tagline {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bio {
+  margin: 0 0 15px;
+  color: var(--ink-soft);
+}
+
+.bio:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* --- contact row ---------------------------------------------------------- */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+  font-family: var(--display);
+  font-size: 14.5px;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+}
+
+.contact a {
+  border-bottom-width: 1px;
+  white-space: nowrap;
+}
+
+.contact .sep {
+  color: var(--rule);
+  user-select: none;
+}
+
+/* --- sections ------------------------------------------------------------- */
+
+section {
+  margin-top: 64px;
+}
+
+h2 {
+  margin: 0 0 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+}
+
+.legend {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* --- news ----------------------------------------------------------------- */
+
+.news {
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 0 8px;
+  padding: 7px 0;
+}
+
+.news time {
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 13.5px;
+  font-weight: 450;
+  letter-spacing: 0.005em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news span {
+  color: var(--ink-soft);
+}
+
+/* --- publications --------------------------------------------------------- */
+
+.year-group {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 0 8px;
+  margin-top: 34px;
+}
+
+.year {
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.pubs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.pubs li + li {
+  margin-top: 26px;
+}
+
+.pub-title {
+  margin: 0 0 3px;
+  font-family: var(--display);
+  font-size: 17.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.016em;
+}
+
+.authors {
+  margin: 0 0 2px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.authors .me {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.venue {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: -0.006em;
+  line-height: 1.6;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 7px;
+  border-radius: 2px;
+  background: var(--tag-bg);
+  color: var(--tag-ink);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 1.5px;
+  white-space: nowrap;
+}
+
+.pub-links {
+  margin: 7px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 9px;
+  font-size: 14px;
+}
+
+.pub-links .sep {
+  color: var(--rule);
+  user-select: none;
+}
+
+/* author list expansion */
+.authors-rest {
+  display: none;
+}
+
+.authors.open .authors-rest {
+  display: inline;
+}
+
+.authors.open .authors-dots {
+  display: none;
+}
+
+.authors-toggle {
+  margin-left: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.authors-toggle:hover {
+  color: var(--accent);
+}
+
+.authors-toggle .less {
+  display: none;
+}
+
+.authors.open .authors-toggle .more {
+  display: none;
+}
+
+.authors.open .authors-toggle .less {
+  display: inline;
+}
+
+/* --- footer --------------------------------------------------------------- */
+
+footer {
+  margin-top: 72px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* --- narrow screens ------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 44px 20px 72px;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .intro-photo {
+    flex: 0 0 auto;
+    order: -1;
+    width: 136px;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  section {
+    margin-top: 48px;
+  }
+
+  .news li,
+  .year-group {
+    grid-template-columns: 1fr;
+  }
+
+  .news li {
+    padding: 9px 0;
+  }
+
+  .news time {
+    font-size: 13.5px;
+  }
+
+  .year {
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .year-group {
+    margin-top: 28px;
+  }
+}
