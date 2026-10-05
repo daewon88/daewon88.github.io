@@ -8,7 +8,7 @@ A plain static site: no build step, no dependencies.
 index.html               the whole page
 assets/css/style.css     styles
 assets/img/prof_pic.jpg  profile photo
-assets/pdf/cv_new.pdf    CV
+assets/pdf/cv.pdf        CV
 .nojekyll                tells GitHub Pages to serve files as-is
 ```
 
