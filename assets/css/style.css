@@ -461,6 +461,7 @@ footer {
 
   .intro {
     flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
 
@@ -468,6 +469,17 @@ footer {
     flex: 0 0 auto;
     width: var(--photo);
     margin-top: 0;
+  }
+
+  /* align-items:center would otherwise shrink this block to its content
+     width; the bio itself stays left-aligned, which reads better */
+  .intro-text {
+    width: 100%;
+  }
+
+  h1,
+  .tagline {
+    text-align: center;
   }
 
   h1 {
