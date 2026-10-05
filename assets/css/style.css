@@ -12,10 +12,10 @@
   --ink-soft: #484850;
   --muted: #86868b;
   --rule: #e5e5e7;
-  --accent: #176b4d;
-  --accent-soft: #1f8c63;
-  --tag-bg: #edf5f0;
-  --tag-ink: #1b6049;
+  --accent: #0f4d37;
+  --accent-soft: #1d7a56;
+  --tag-bg: #eaf3ee;
+  --tag-ink: #124932;
   --select: #d6efe1;
 
   /* photo width drives the contact icon row below it, so one number rescales
