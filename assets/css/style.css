@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
    Daewon Chae — personal site
-   San Francisco (Inter fallback), white ground, pine-green accent.
+   San Francisco (Inter fallback), white ground, vivid emerald accent.
    Light theme only.
 --------------------------------------------------------------------------- */
 
@@ -12,11 +12,11 @@
   --ink-soft: #484850;
   --muted: #86868b;
   --rule: #e5e5e7;
-  --accent: #0f4d37;
-  --accent-soft: #1d7a56;
-  --tag-bg: #eaf3ee;
-  --tag-ink: #124932;
-  --select: #d6efe1;
+  --accent: #00875a;
+  --accent-soft: #00a86b;
+  --tag-bg: #e6f6ef;
+  --tag-ink: #00684a;
+  --select: #cff3e1;
 
   /* photo width drives the contact icon row below it, so one number rescales
      the whole left column */
